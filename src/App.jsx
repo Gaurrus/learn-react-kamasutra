@@ -4,7 +4,11 @@ function App() {
   return (
     <div className="app-wrapper">
       <header className="header">
-        <img src="../img/logo.svg" alt="logo" className="logo-img" />
+        <img
+          src="https://store-images.s-microsoft.com/image/apps.47867.13879366447690213.ff0dcdf1-af01-4af7-b105-db57cef9cb67.771cf851-92c5-4d8a-9314-5cfc91541202?mode=scale&q=90&h=200&w=200&background=%230078D7"
+          alt="logo"
+          className="logo-img"
+        />
         <h1>Antisocial web</h1>
       </header>
       <nav className="nav">
@@ -28,7 +32,7 @@ function App() {
       </nav>
       <main className="main">
         <img
-          src="https://p4.wallpaperbetter.com/wallpaper/500/442/354/outrun-vaporwave-hd-wallpaper-preview.jpg"
+          src="https://store.hp.com/app/assets/images/uploads/prod/25-best-hd-wallpapers-laptops159561982840438.jpg"
           alt="wallpaper"
           className="wallpaper"
         />
