@@ -1,7 +1,7 @@
-import MainWallpaper from "./main-wallpaper";
-import NewPost from "./new-post";
-import ProfileBlock from "./profile-block";
-import ProfileMessage from "./profile-message";
+import MainWallpaper from "../components/main-wallpaper";
+import NewPost from "../components/new-post";
+import ProfileBlock from "../components/profile-block";
+import ProfileMessage from "../components/profile-message";
 
 const Main = () => {
   return <main className="main">

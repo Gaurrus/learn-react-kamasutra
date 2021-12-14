@@ -176,6 +176,30 @@ a:hover {
   grid-row-end: 3;
   background-color: #1fd1c8;
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.profile-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.avatar {
+  border-radius: 4px;
+  margin-right: 16px;
 }
 
 .posts {
