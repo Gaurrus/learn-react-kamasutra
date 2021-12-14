@@ -1,6 +1,8 @@
+import navStyles from '../components/nav.module.css'
+
 const Nav = () => {
-  return <nav className="nav">
-    <ul className="nav-list">
+  return <nav className={navStyles.nav}>
+    <ul className={navStyles.list}>
       <li>
         <a href="#!">Profile</a>
       </li>
@@ -14,7 +16,7 @@ const Nav = () => {
         <a href="#!">Music</a>
       </li>
     </ul>
-    <ul className="nav-list">
+    <ul className={navStyles.list}>
       <a href="#!">Settings</a>
     </ul>
   </nav>

@@ -1,7 +1,11 @@
+import footerStyles from "../components/footer.module.css";
+
 const Footer = () => {
-  return <footer className="footer">
-    <div>Garrus-learn-react.LTD-JPG-PTU/BLR</div>
-  </footer>
-}
+  return (
+    <footer className={footerStyles.footer}>
+      <div>Garrus-learn-react.LTD-JPG-PTU/BLR</div>
+    </footer>
+  );
+};
 
 export default Footer;

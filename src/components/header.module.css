@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #1fd1c8;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: #00000080 0px 5px 5px;
+    color: #ffffff;
+  }
+
+  .logo {
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    box-shadow: #00000080 5px 5px 5px;
+  }

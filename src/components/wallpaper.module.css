@@ -1,0 +1,8 @@
+.wallpaper {
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  
+  .image {
+    width: 100%;
+  }
