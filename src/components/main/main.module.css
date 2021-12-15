@@ -1,11 +1,9 @@
 .main {
   grid-column-start: 2;
   grid-column-end: 6;
-  grid-row-start: 2;
-  grid-row-end: 5;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 200px 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   row-gap: 5px;
   border-radius: 4px;
   box-shadow: #00000080 0px 5px 5px;
@@ -13,10 +11,6 @@
 }
 
 .miniprofile {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
   background-color: #1fd1c8;
   border-radius: 4px;
   display: flex;
@@ -26,10 +20,12 @@
 }
 
 .posts {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 3;
-  grid-row-end: 4;
   background-color: #1fd1c8;
   border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 8px;
+  margin-right: 40px;
+  padding: 10px;
 }

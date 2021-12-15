@@ -1,9 +1,10 @@
-import wallpaperStyles from '../components/wallpaper.module.css'
+import wallpaperStyles from '../main/wallpaper.module.css'
+import { wallpaper } from '../img/import-lmages';
 
 const MainWallpaper = () => {
   return <div className={wallpaperStyles.wallpaper}>
     <img
-      src="https://store.hp.com/app/assets/images/uploads/prod/25-best-hd-wallpapers-laptops159561982840438.jpg"
+      src={wallpaper}
       alt="wallpaper"
       className={wallpaperStyles.image}
     />

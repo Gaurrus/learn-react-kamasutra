@@ -1,4 +1,4 @@
-import profileInfoStyles from "../components/profile-info.module.css";
+import profileInfoStyles from "../profile/profile-info.module.css";
 
 const ProfileInfo = ({
   userName = "name",

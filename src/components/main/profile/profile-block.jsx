@@ -1,5 +1,6 @@
-import ProfileInfo from "../components/profile-info";
-import profileStyles from "../components/profile-block.module.css";
+import ProfileInfo from "../profile/profile-info";
+import profileStyles from "../profile/profile-block.module.css";
+import Avatar from "./avatar";
 
 const ProfileBlock = ({
   userName = "name",
@@ -12,11 +13,7 @@ const ProfileBlock = ({
 }) => {
   return (
     <div className={profileStyles.wrapper}>
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiNgTAOKQDwj1QFQZ6yavofxnyj2MPw0A24w&usqp=CAU"
-        alt="avatar"
-        className={profileStyles.avatar}
-      />
+      <Avatar />
       <ProfileInfo
         userName="Иоанн Васильевич"
         age="25 августа 1530г от рождества Христова"

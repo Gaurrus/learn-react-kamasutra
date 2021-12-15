@@ -87,19 +87,14 @@ a:hover {
   font-weight: 500;
 }
 
-
-
-
 .app-wrapper {
   text-align: center;
   margin: 0 auto;
   max-width: 1440px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr 4fr 4fr 4fr 1fr;
+  grid-template-rows: 1fr 12fr 1fr;
   row-gap: 10px;
   column-gap: 10px;
   padding: 0 10px;
 }
-
-

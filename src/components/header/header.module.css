@@ -10,11 +10,14 @@
     border-radius: 4px;
     box-shadow: #00000080 0px 5px 5px;
     color: #ffffff;
+    font-size: 32px;
+    font-weight: 900;
   }
 
   .logo {
-    width: 40px;
+    width: 10%;
     margin-right: 10px;
     border-radius: 50%;
+    background-color: black;
     box-shadow: #00000080 5px 5px 5px;
   }
