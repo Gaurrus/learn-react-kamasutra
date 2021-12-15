@@ -1,4 +1,10 @@
 import MainWallpaper from "../main/main-wallpaper";
+import {
+  avatarOne,
+  avatarTwo,
+  avatarThree,
+  myAvatar,
+} from "../img/import-lmages";
 
 import ProfileBlock from "./profile/profile-block";
 import ProfileMessage from "./my_posts/my-post";
@@ -10,12 +16,12 @@ const Main = () => {
       <MainWallpaper />
       <div className={mainStyles.miniprofile}>
         <ProfileBlock />
-        <ProfileMessage message="My-post"/>
+        <ProfileMessage message="My-post" avatarSrc={myAvatar} />
       </div>
       <div className={mainStyles.posts}>
-      <ProfileMessage message="post-1"/>
-      <ProfileMessage message="post-2"/>
-      <ProfileMessage message="post-3"/>
+        <ProfileMessage message="post-1" avatarSrc={avatarOne} />
+        <ProfileMessage message="post-2" avatarSrc={avatarTwo} />
+        <ProfileMessage message="post-3" avatarSrc={avatarThree} />
       </div>
     </main>
   );
