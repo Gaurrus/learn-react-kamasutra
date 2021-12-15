@@ -1,14 +1,22 @@
 import navStyles from "../nav/nav.module.css";
+import {
+  BrowserRouter,
+  NavLink,
+  Route,
+  Router,
+  Routes,
+  Link,
+} from "react-router-dom";
 
 const Nav = () => {
   return (
     <nav className={navStyles.nav}>
       <ul className={navStyles.list}>
         <li>
-          <a href="/main">Profile</a>
+          <Link to="/main">Profile</Link>
         </li>
         <li>
-          <a href="/dialogs">Messages</a>
+          <Link to="/dialogs">Messages</Link>
         </li>
         <li>
           <a href="#!">News</a>
