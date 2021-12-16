@@ -1,14 +1,30 @@
 import Contact from "./contact";
+import contactListStyle from "./contact-list.module.css";
+
+
 
 const ContactList = (props) => {
-  return (
-    <div>
-      <span>Список контактов</span>
-      <ul>
-        <Contact contact_name="Garrus" />
-        <Contact contact_name="Зюзя" />
-        <Contact contact_name="Пипа" />
-        <Contact contact_name="Кузя" />
+  let contactsData = [{
+    name: 'Garrus',
+  },
+  {
+    name: 'Зюзя',
+  },
+  {
+    name: 'Пипа',
+  },
+  {
+    name: 'Кузя',
+  },
+  ]
+    return (
+    <div className={contactListStyle.wrapper}>
+      <span className={contactListStyle.header}>Список контактов</span>
+      <ul className={contactListStyle.contacts}>
+        <Contact contact_name={contactsData[0].name} />
+        <Contact contact_name={contactsData[1].name} />
+        <Contact contact_name={contactsData[2].name} />
+        <Contact contact_name={contactsData[3].name} />
       </ul>
     </div>
   );

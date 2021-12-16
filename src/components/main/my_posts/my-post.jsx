@@ -1,6 +1,6 @@
 import myPostsStyles from "../my_posts/my-post.module.css"
 
-const ProfileBlock = (props) => {
+const WallMessage = (props) => {
   return <div className={myPostsStyles.my_post}>
     <div className={myPostsStyles.avatar_ico}>
     <img
@@ -12,7 +12,10 @@ const ProfileBlock = (props) => {
     <span className={myPostsStyles.my_message}>
       {props.message}
     </span>
+    <span className={myPostsStyles.like}>
+      {props.likes}
+    </span>
   </div>
 }
 
-export default ProfileBlock;
+export default WallMessage;

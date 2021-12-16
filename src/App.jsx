@@ -17,11 +17,11 @@ const App = (props) => {
         <Nav />
 
         <Routes>
-          <Route path="/dialogs" element={<Dialogs />} />
-          <Route path="/main" element={<Main />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/music" element={<Music />} />
-          <Route path="/settings" element={<Settings />} />
+          <Route exact path="/dialogs" element={<Dialogs />} />
+          <Route exact path="/main" element={<Main />} />
+          <Route exact path="/news" element={<News />} />
+          <Route exact path="/music" element={<Music />} />
+          <Route exact path="/settings" element={<Settings />} />
         </Routes>
         <Footer />
       </div>
