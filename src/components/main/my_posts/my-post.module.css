@@ -1,0 +1,40 @@
+.avatar_ico {
+  max-width: 50px;
+  margin-right: 16px;
+  box-shadow: black 5px 5px 10px;
+}
+
+.my_post {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.my_post:hover {
+  opacity: 0.6;
+}
+
+.my_message {
+  padding: 5px;
+  background-color: grey;
+  border-radius: 4px;
+  min-width: 400px;
+  text-align: justify;
+  box-shadow: black 5px 5px 10px;
+}
+
+.avatar {
+  border-radius: 4px;
+  margin-right: 16px;
+}
+
+.like {
+  margin-left: 4px;
+  background-color: tomato;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: black 5px 5px 10px;
+}

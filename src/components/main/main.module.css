@@ -1,0 +1,31 @@
+.main {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 5px;
+  border-radius: 4px;
+  box-shadow: #00000080 0px 5px 5px;
+  background-color: #1fd1c8;
+}
+
+.miniprofile {
+  background-color: #1fd1c8;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.posts {
+  background-color: #1fd1c8;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  row-gap: 8px;
+  margin-right: 40px;
+  padding: 10px;
+}

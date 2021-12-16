@@ -1,0 +1,8 @@
+.wrapper {
+    background-color: rgb(150, 150, 231);
+    border-radius: 4px;
+    grid-column: 2/6; 
+    text-align: justify;
+    padding: 8px;
+    box-shadow: #00000080 0px 5px 5px;
+}

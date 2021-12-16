@@ -1,0 +1,10 @@
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  
+  background-color: #1fd1c8;
+  align-self: center;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: #00000080 0px 5px 5px;
+}

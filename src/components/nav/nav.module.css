@@ -1,0 +1,31 @@
+.nav {
+  background-color: #1fd1c8;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding: 10px;
+  text-align: justify;
+  border-radius: 4px;
+  box-shadow: #00000080 0px 5px 5px;
+}
+
+.list {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  font-size: 24px;
+}
+
+.list li:last-of-type {
+  margin-top: 20px;
+}
+
+.list a {
+  text-decoration: none;
+  color: black;
+}
+
+.list a:hover {
+  font-weight: 500;
+}
