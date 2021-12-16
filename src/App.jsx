@@ -5,6 +5,9 @@ import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
 import Main from "./components/main/main";
 import Nav from "./components/nav/nav";
+import Settings from "./components/settings/settings";
+import Music from "./components/music/music";
+import News from "./components/news/news";
 
 const App = (props) => {
   return (
@@ -12,9 +15,13 @@ const App = (props) => {
       <div className="app-wrapper">
         <Header />
         <Nav />
+
         <Routes>
           <Route path="/dialogs" element={<Dialogs />} />
           <Route path="/main" element={<Main />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/music" element={<Music />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
         <Footer />
       </div>

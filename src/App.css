@@ -78,14 +78,7 @@ select {
   }
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
 
-a:hover {
-  font-weight: 500;
-}
 
 .app-wrapper {
   text-align: center;

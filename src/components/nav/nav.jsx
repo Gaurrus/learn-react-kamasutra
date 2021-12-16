@@ -1,11 +1,6 @@
 import navStyles from "../nav/nav.module.css";
 import {
-  BrowserRouter,
-  NavLink,
-  Route,
-  Router,
-  Routes,
-  Link,
+  NavLink
 } from "react-router-dom";
 
 const Nav = () => {
@@ -13,20 +8,20 @@ const Nav = () => {
     <nav className={navStyles.nav}>
       <ul className={navStyles.list}>
         <li>
-          <Link to="/main">Profile</Link>
+          <NavLink to="/main" style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}>Profile</NavLink>
         </li>
         <li>
-          <Link to="/dialogs">Messages</Link>
+          <NavLink to="/dialogs" style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}>Messages</NavLink>
         </li>
         <li>
-          <a href="#!">News</a>
+          <NavLink to="/news" style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}>News</NavLink>
         </li>
         <li>
-          <a href="#!">Music</a>
+          <NavLink to="/music" style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}>Music</NavLink>
         </li>
-      </ul>
-      <ul className={navStyles.list}>
-        <a href="#!">Settings</a>
+        <li>
+          <NavLink to="/settings" style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}>Settings</NavLink>
+        </li>
       </ul>
     </nav>
   );
