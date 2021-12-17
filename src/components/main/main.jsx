@@ -1,13 +1,10 @@
-import MainWallpaper from "../main/main-wallpaper";
-import {
-  avatarOne,
-  avatarTwo,
-  avatarThree,
-  myAvatar,
-} from "../img/import-lmages";
-
-import ProfileBlock from "./profile/profile-block";
 import WallMessage from "./my_posts/my-post";
+import ProfileBlock from "./profile/profile-block";
+
+import MainWallpaper from "../main/main-wallpaper";
+import { myAvatar, avatarOne, avatarTwo, avatarThree } from "./profile/assets/export";
+
+
 import mainStyles from "../main/main.module.css";
 
 const Main = () => {
@@ -40,6 +37,7 @@ const Main = () => {
         <WallMessage message={postsData[1].post} likes={postsData[1].likes} avatarSrc={avatarOne} />
         <WallMessage message={postsData[2].post} likes={postsData[2].likes} avatarSrc={avatarTwo} />
         <WallMessage message={postsData[3].post} likes={postsData[3].likes} avatarSrc={avatarThree} />
+
       </div>
     </main>
   );

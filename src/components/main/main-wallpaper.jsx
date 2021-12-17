@@ -1,5 +1,5 @@
 import wallpaperStyles from '../main/wallpaper.module.css'
-import { wallpaper } from '../img/import-lmages';
+import wallpaper from './assets/export';
 
 const MainWallpaper = () => {
   return <div className={wallpaperStyles.wallpaper}>

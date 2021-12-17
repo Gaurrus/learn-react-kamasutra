@@ -1,4 +1,4 @@
-import { myAvatar } from "../../img/import-lmages";
+import { myAvatar } from './assets/export'
 import AvatarStyles from "../profile/avatar.module.css";
 
 const Avatar = () => {
