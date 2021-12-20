@@ -11,32 +11,40 @@ const Main = () => {
 
   let postsData = [{
     post: 'Какой-то пост!',
-    likes: 2
+    likes: 2,
+    avatar: myAvatar,
   },
   {
     post: 'пост - 1',
-    likes: 4
+    likes: 4,
+    avatar: avatarOne,
   },
   {
     post: 'пост - 2',
-    likes: 6
+    likes: 6,
+    avatar: avatarTwo,
   },
   {
     post: 'пост - 3',
-    likes: 8
+    likes: 8,
+    avatar: avatarThree,
+  },
+  {
+    post: 'пост - 4',
+    likes: 10,
+    avatar: avatarThree,
   },
   ]
+
+  let posts = postsData.map((post) => <WallMessage message={post.post} likes={post.likes} avatarSrc={post.avatar} />)
   return (
     <main className={mainStyles.main}>
       <MainWallpaper />
       <div className={mainStyles.miniprofile}>
         <ProfileBlock />
-        <WallMessage message={postsData[0].post} likes={postsData[0].likes} avatarSrc={myAvatar} />
       </div>
       <div className={mainStyles.posts}>
-        <WallMessage message={postsData[1].post} likes={postsData[1].likes} avatarSrc={avatarOne} />
-        <WallMessage message={postsData[2].post} likes={postsData[2].likes} avatarSrc={avatarTwo} />
-        <WallMessage message={postsData[3].post} likes={postsData[3].likes} avatarSrc={avatarThree} />
+        {posts}
 
       </div>
     </main>

@@ -16,15 +16,21 @@ const ContactList = (props) => {
   {
     name: 'Кузя',
   },
+  {
+    name: 'Федя',
+  },
   ]
-    return (
+
+  let contactsElements = contactsData.map((contact) => <Contact contact_name={contact.name} />)
+
+
+  return (
     <div className={contactListStyle.wrapper}>
       <span className={contactListStyle.header}>Список контактов</span>
       <ul className={contactListStyle.contacts}>
-        <Contact contact_name={contactsData[0].name} />
-        <Contact contact_name={contactsData[1].name} />
-        <Contact contact_name={contactsData[2].name} />
-        <Contact contact_name={contactsData[3].name} />
+        {
+          contactsElements
+        }
       </ul>
     </div>
   );

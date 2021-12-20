@@ -15,14 +15,16 @@ const MessageArea = (props) => {
   {
     data: 'Ya tut!',
   },
+  {
+    data: 'Horosho!',
+  },
   ]
+
+  let messagesList = messagesData.map((message) => <Message message={message.data} />)
 
   return <div className={messageAreaStyle.wrapper}>
     <span className={messageAreaStyle.header}>Сообщения</span>
-    <Message message={messagesData[0].data} />
-    <Message message={messagesData[1].data} />
-    <Message message={messagesData[2].data} />
-    <Message message={messagesData[3].data} />
+    {messagesList}
   </div>
 };
 export default MessageArea;
