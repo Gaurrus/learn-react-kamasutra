@@ -3,23 +3,23 @@ export const contactsData = [{
   name: 'Garrus',
   messages: [
     {
-      id: 1,
+      mId: 1,
       message: 'Hallo!',
     },
     {
-      id: 2,
+      mId: 2,
       message: 'Salut!',
     },
     {
-      id: 3,
+      mId: 3,
       message: 'Ti Gde?',
     },
     {
-      id: 4,
+      mId: 4,
       message: 'Ya tut!!',
     },
     {
-      id: 5,
+      mId: 5,
       message: 'Horosho!',
     },
   ]
@@ -30,7 +30,7 @@ export const contactsData = [{
   name: 'Зюзя',
   messages: [
     {
-      id: 1,
+      mId: 1,
       message: 'Hallo!',
     },
   ]
@@ -40,7 +40,7 @@ export const contactsData = [{
   name: 'Пипа',
   messages: [
     {
-      id: 1,
+      mId: 1,
       message: 'Hallo!',
     },
   ]
@@ -50,7 +50,7 @@ export const contactsData = [{
   name: 'Кузя',
   messages: [
     {
-      id: 1,
+      mId: 1,
       message: 'Hallo!',
     },
   ]
@@ -60,7 +60,7 @@ export const contactsData = [{
   name: 'Федя',
   messages: [
     {
-      id: 1,
+      mId: 1,
       message: 'Hallo!',
     },
   ]
