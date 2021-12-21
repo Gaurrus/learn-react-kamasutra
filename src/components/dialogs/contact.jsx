@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+
 import contactStyle from "./contact.module.css"
 
 const Contact = (props) => {

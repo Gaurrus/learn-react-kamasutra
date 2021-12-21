@@ -1,26 +1,12 @@
-import messageAreaStyle from '../dialogs/message-area.module.css'
 import Message from './message';
+
+import { contactsData } from './../../constants/contacts-data';
+
+import messageAreaStyle from '../dialogs/message-area.module.css'
 
 const MessageArea = (props) => {
 
-  let messagesData = [{
-    data: 'Hallo!',
-  },
-  {
-    data: 'Salut',
-  },
-  {
-    data: 'Ti Gde?',
-  },
-  {
-    data: 'Ya tut!',
-  },
-  {
-    data: 'Horosho!',
-  },
-  ]
-
-  let messagesList = messagesData.map((message) => <Message message={message.data} />)
+  let messagesList = contactsData.map((item) => <Message key={item.id} message={item.messages} />)
 
   return <div className={messageAreaStyle.wrapper}>
     <span className={messageAreaStyle.header}>Сообщения</span>

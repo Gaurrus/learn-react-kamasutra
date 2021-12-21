@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 import Dialogs from "./components/dialogs/dialogs";
 import Footer from "./components/footer/footer";
 import Header from "./components/header/header";
@@ -8,6 +7,7 @@ import Nav from "./components/nav/nav";
 import Settings from "./components/settings/settings";
 import Music from "./components/music/music";
 import News from "./components/news/news";
+import "./App.css";
 
 const App = (props) => {
   return (

@@ -1,8 +1,10 @@
 import messageStyle from '../dialogs/message.module.css'
 
-const Message = (props) => {
+const Message = ({message}) => {
   return <div className={messageStyle.wrapper}>
-    <span className={messageStyle.header}>{props.message}</span>
+
+    {message.map((item)=><span key={item.id} className={messageStyle.header}>{item.message}</span> )}
+
   </div>
 };
 

@@ -1,6 +1,7 @@
 import ContactList from "./contact-list";
-import dialogsStyles from "./dialogs.module.css";
 import MessageArea from "./message-area";
+
+import dialogsStyles from "./dialogs.module.css";
 
 const Dialogs = (props) => {
   return (
