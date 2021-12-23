@@ -1,23 +1,17 @@
 import profileInfoStyles from "../profile/profile-info.module.css";
 
-const ProfileInfo = ({
-  userName = "name",
-  age = "age",
-  sex = "sex",
-  profession = "profi",
-  contry = "contry",
-  sity = "sity",
-  education = "education",
-}) => {
+const ProfileInfo = ({userData}) => {
   return (
     <div className={profileInfoStyles.info}>
-      <span>Имя: {userName}</span>
-      <span>Дата рождения: {age}</span>
-      <span>Пол: {sex}</span>
-      <span>Страна: {contry}</span>
-      <span>Город: {sity}</span>
-      <span>Образование: {education}</span>
-      <span>Род дейтельности: {profession}</span>
+      <span>Имя: {userData.firstName}</span>
+      <span>Фамилия: {userData.lastName}</span>
+      <span>Отчество: {userData.middleName}</span>
+      <span>Дата рождения: {userData.dateOfBirthd}</span>
+      <span>Возраст: {userData.age}</span>
+      <span>Страна: {userData.contry}</span>
+      <span>Город: {userData.city}</span>
+      <span>Профессия: {userData.profession}</span>
+      
     </div>
   );
 };

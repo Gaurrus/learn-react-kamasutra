@@ -1,5 +1,5 @@
 export const myData = {
-  firstТame: 'Иоанн',
+  firstName: 'Иоанн',
   lastName: 'Рюриковичи мы!',
   middleName: 'Васильевич',
   dateOfBirthd: '25 августа 1530г от рождества Христова',
