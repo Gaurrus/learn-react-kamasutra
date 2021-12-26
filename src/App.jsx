@@ -9,9 +9,8 @@ import Settings from "./components/settings/settings";
 import Music from "./components/music/music";
 import News from "./components/news/news";
 
-import { contactsData } from "./constants/contacts-data";
-import { myData } from './constants/my-data';
-import { postsData } from "./constants/posts-data";
+import { state } from "./components/redux";
+
 
 
 
@@ -25,8 +24,8 @@ const App = (props) => {
         <Nav />
 
         <Routes>
-          <Route exact path="/dialogs" element={<Dialogs contactsData={contactsData} />} />
-          <Route exact path="/main" element={<Main userData={myData} postsData={postsData} />} />
+          <Route exact path="/dialogs" element={<Dialogs state={state} />} />
+          <Route exact path="/main" element={<Main state={state} />} />
           <Route exact path="/news" element={<News />} />
           <Route exact path="/music" element={<Music />} />
           <Route exact path="/settings" element={<Settings />} />

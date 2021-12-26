@@ -2,10 +2,14 @@ import { NavLink } from "react-router-dom";
 
 import contactStyle from "./contact.module.css"
 
-const Contact = (props) => {
+const Contact = ({ contact }) => {
   return <li>
-    <NavLink className={`${contactStyle.contact} ${contactStyle.active}`} to={`/dialogs/${props.contact_name}`}>
-      {props.contact_name}
+    
+    <NavLink className={`${contactStyle.contact} ${contactStyle.active}`} to={`/dialogs/${contact.name}`}>
+      <>
+        {console.log(contact.avatar)}
+        {contact}
+      </>
     </NavLink>
   </li >;
 };

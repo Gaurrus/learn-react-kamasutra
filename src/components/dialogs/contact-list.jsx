@@ -1,15 +1,12 @@
 import Contact from "./contact";
 
-import { contactsData } from '../../constants/contacts-data';
-
 import contactListStyle from "./contact-list.module.css";
 
 
 
 const ContactList = (props) => {
-
-
-  let contactsElements = contactsData.map((contact) => <Contact key={contact.id} contact_name={contact.name} />)
+  
+  let contactsElements = props.state.dialogsPage.contactsData.map((contact) => <Contact key={contact.id} contact={contact.name} />)
 
 
   return (
