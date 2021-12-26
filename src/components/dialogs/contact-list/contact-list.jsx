@@ -1,12 +1,10 @@
-import Contact from "./contact";
+import { Contact } from './../contact';
 
 import contactListStyle from "./contact-list.module.css";
 
+export const ContactList = (props) => {
 
-
-const ContactList = (props) => {
-  
-  let contactsElements = props.state.dialogsPage.contactsData.map((contact) => <Contact key={contact.id} contact={contact.name} />)
+  let contactsElements = props.state.dialogsPage.contactsData.map((contact) => <Contact key={contact.id} contact={contact.name} avatar={contact.avatar} />)
 
 
   return (
@@ -20,4 +18,4 @@ const ContactList = (props) => {
     </div>
   );
 };
-export default ContactList;
+

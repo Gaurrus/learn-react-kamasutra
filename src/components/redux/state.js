@@ -1,4 +1,4 @@
-import { myAvatar, avatarOne, avatarTwo, avatarThree } from "../main/profile/assets/export"
+import { myAvatar, avatarOne, avatarTwo, avatarThree } from "../main/assets/index.js"
 
 export const state = {
   dialogsPage: {
@@ -21,7 +21,7 @@ export const state = {
     {
       id: '4',
       name: 'Кузя',
-      avatar: avatarThree,
+      avatar: avatarOne,
     },
     {
       id: '5',
@@ -71,31 +71,37 @@ export const state = {
       post: 'Какой-то пост!',
       likes: 2,
       avatar: myAvatar,
+      id: 1,
     },
     {
       post: 'пост - 1',
       likes: 4,
       avatar: avatarOne,
+      id: 2,
     },
     {
       post: 'пост - 2',
       likes: 6,
       avatar: avatarTwo,
+      id: 3,
     },
     {
       post: 'пост - 3',
       likes: 8,
       avatar: avatarThree,
+      id: 4,
     },
     {
       post: 'пост - 4',
       likes: 10,
       avatar: avatarOne,
+      id: 5,
     },
     {
       post: 'пост - 5',
       likes: 1,
       avatar: avatarTwo,
+      id: 6,
     },
     ],
   }

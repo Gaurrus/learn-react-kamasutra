@@ -1,18 +1,19 @@
-import WallMessage from "./my_posts/my-post";
-import ProfileBlock from "./profile/profile-block";
+import { ProfileBlock } from "./profile-block";
+import { MainWallpaper } from "./main-wallpaper";
+import { Post } from './post';
 
-import MainWallpaper from "../main/main-wallpaper";
 
-import mainStyles from "../main/main.module.css";
 
-export const Main = ({ state }) => {
+import mainStyles from "./main.module.css";
 
-  let posts = state.postsData.map((post) => <WallMessage message={post.post} likes={post.likes} avatarSrc={post.avatar} />)
+export const Main = (props) => {
+
+  let posts = props.state.profilePage.postsData.map((post) => <Post key={post.id.toString()} message={post.post} likes={post.likes} avatarSrc={post.avatar} />)
   return (
     <main className={mainStyles.main}>
       <MainWallpaper />
       <div className={mainStyles.miniprofile}>
-        <ProfileBlock state={state} />
+        <ProfileBlock state={props.state} />
       </div>
       <div className={mainStyles.posts}>
         {posts}
@@ -21,5 +22,3 @@ export const Main = ({ state }) => {
     </main>
   );
 };
-
-export default Main;

@@ -1,8 +1,8 @@
-import wallpaper from './assets/export';
+import { wallpaper } from '../assets/index';
 
-import wallpaperStyles from '../main/wallpaper.module.css'
+import wallpaperStyles from './main-wallpaper.module.css'
 
-const MainWallpaper = () => {
+export const MainWallpaper = () => {
   return <div className={wallpaperStyles.wallpaper}>
     <img
       src={wallpaper}
@@ -11,5 +11,3 @@ const MainWallpaper = () => {
     />
   </div>
 }
-
-export default MainWallpaper;

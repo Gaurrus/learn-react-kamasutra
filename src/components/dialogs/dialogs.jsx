@@ -1,5 +1,5 @@
-import ContactList from "./contact-list";
-import MessageArea from "./message-area";
+import { ContactList } from './contact-list';
+import { MessageArea } from './message-area';
 
 import dialogsStyles from "./dialogs.module.css";
 
