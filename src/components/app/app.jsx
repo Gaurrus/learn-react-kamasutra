@@ -1,14 +1,15 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
-import Dialogs from "./../dialogs";
-import Footer from "./../footer";
-import Header from "./../header";
-import Main from "./../main";
-import Nav from "./../nav/";
-import Settings from "./..app/settings";
-import Music from "./../music";
-import News from "./../news";
-
+import { Dialogs } from './../dialogs/dialogs';
+import { Header } from './../header/header';
+import { Nav } from './../nav/nav';
+import { Main } from './../main/main';
+import { News } from './../news/news';
+import { Music } from './../music/music';
+import { Settings } from './../settings/settings';
+import { Footer } from './../footer/footer';
 
 import { state } from './../redux';
 

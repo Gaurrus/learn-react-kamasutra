@@ -1,9 +1,8 @@
 import navStyles from "../nav/nav.module.css";
-import {
-  NavLink
-} from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
-const Nav = () => {
+
+export const Nav = () => {
   return (
     <nav className={navStyles.nav}>
       <ul className={navStyles.list}>
@@ -26,5 +25,3 @@ const Nav = () => {
     </nav>
   );
 };
-
-export default Nav;
