@@ -1,22 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Dialogs from "./components/dialogs/dialogs";
-import Footer from "./components/footer/footer";
-import Header from "./components/header/header";
-import Main from "./components/main/main";
-import Nav from "./components/nav/nav";
-import Settings from "./components/settings/settings";
-import Music from "./components/music/music";
-import News from "./components/news/news";
-
-import { state } from "./components/redux";
+import Dialogs from "./../dialogs";
+import Footer from "./../footer";
+import Header from "./../header";
+import Main from "./../main";
+import Nav from "./../nav/";
+import Settings from "./..app/settings";
+import Music from "./../music";
+import News from "./../news";
 
 
+import { state } from './../redux';
 
+import "./app.css";
 
-import "./App.css";
-
-const App = (props) => {
+export const App = (props) => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -35,5 +33,3 @@ const App = (props) => {
     </BrowserRouter>
   );
 };
-
-export default App;
