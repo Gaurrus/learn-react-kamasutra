@@ -1,1 +1,1 @@
-export { state } from './state';
+export { state, addPost } from './state';

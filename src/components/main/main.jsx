@@ -13,7 +13,7 @@ export const Main = (props) => {
     <main className={mainStyles.main}>
       <MainWallpaper />
       <div className={mainStyles.miniprofile}>
-        <ProfileBlock state={props.state} />
+        <ProfileBlock state={props.state} addPost={props.addPost} />
       </div>
       <div className={mainStyles.posts}>
         {posts}

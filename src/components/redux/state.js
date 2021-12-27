@@ -1,3 +1,4 @@
+import { rerenderEntireTree } from "../../render.js";
 import { myAvatar, avatarOne, avatarTwo, avatarThree } from "../main/assets/index.js"
 
 export const state = {
@@ -105,4 +106,15 @@ export const state = {
     },
     ],
   }
+}
+
+export const addPost = (postMessage) => {
+  const newPost = {
+    post: postMessage,
+    likes: 0,
+    avatar: avatarOne,
+    id: 7,
+  };
+  state.profilePage.postsData.push(newPost)
+  rerenderEntireTree()
 }

@@ -11,7 +11,7 @@ export const ProfileBlock = (props) => {
         <Avatar />
         <ProfileInfo state={props.state} />
         </div>
-        <AddPost/>
+        <AddPost addPost={props.addPost}/>
     </div>
   );
 };
