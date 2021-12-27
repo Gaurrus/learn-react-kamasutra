@@ -1,0 +1,18 @@
+.input {
+  margin-top: 20px;
+  border-radius: 4px;
+
+}
+.button {
+  padding: 5px 15px;
+  border-radius: 4px;
+  background-color: #1fd1c8;
+  font-size: 14px;
+}
+
+.addPostBlock {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  align-self: flex-end;
+}

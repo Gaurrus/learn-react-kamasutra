@@ -1,6 +1,12 @@
 .wrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   margin-bottom: 16px;
+
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: row;
 }
