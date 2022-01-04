@@ -8,7 +8,8 @@ export const AddPost = (props) => {
 
     const addMess = () => {
         const text = newPostElem.current.value;
-       props.addPost(text)
+        props.addPost(text);
+        newPostElem.current.value = ''
     }
     return (
         <div className={styles.addPostBlock}>
