@@ -113,8 +113,8 @@ export const addPost = (postMessage) => {
     post: postMessage,
     likes: 0,
     avatar: avatarOne,
-    id: 7,
+    id: state.profilePage.postsData.length + 1,
   };
   state.profilePage.postsData.push(newPost)
-  rerenderEntireTree()
+  rerenderEntireTree(state, addPost)
 }
