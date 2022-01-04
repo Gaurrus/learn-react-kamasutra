@@ -7,7 +7,7 @@ export const Nav = () => {
     <nav className={navStyles.nav}>
       <ul className={navStyles.list}>
         <li>
-          <NavLink to="/main" style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}>Profile</NavLink>
+          <NavLink to="" style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}>Profile</NavLink>
         </li>
         <li>
           <NavLink to="/dialogs" style={({ isActive }) => ({ color: isActive ? 'white' : 'black' })}>Messages</NavLink>

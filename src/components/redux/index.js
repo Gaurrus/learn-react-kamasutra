@@ -1,1 +1,1 @@
-export { state, addPost, updateNewPostMessage } from './state';
+export { state, addPost, updateNewPostMessage, subscribe } from './state';

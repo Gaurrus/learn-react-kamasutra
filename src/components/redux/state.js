@@ -1,5 +1,6 @@
-import { rerenderEntireTree } from "../../render.js";
 import { myAvatar, avatarOne, avatarTwo, avatarThree } from "../main/assets/index.js"
+let rerenderEntireTree = () => { }
+
 
 export const state = {
   dialogsPage: {
@@ -125,4 +126,8 @@ export const updateNewPostMessage = (text) => {
 
   state.profilePage.newPostMessage = text;
   rerenderEntireTree(state, updateNewPostMessage)
+}
+
+export const subscribe = (observer) => {
+  rerenderEntireTree = observer;
 }
