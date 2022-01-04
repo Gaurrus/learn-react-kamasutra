@@ -7,13 +7,18 @@ export const AddPost = (props) => {
     const newPostElem = useRef();
 
     const addMess = () => {
-        const text = newPostElem.current.value;
-        props.addPost(text);
-        newPostElem.current.value = ''
+        props.addPost();
     }
+
+    const postOnChange = () => {
+        const text = newPostElem.current.value;
+        props.updateNewPostMessage(text);
+
+    }
+
     return (
         <div className={styles.addPostBlock}>
-            <input className={styles.input} ref={newPostElem} type="text" />
+            <input className={styles.input} ref={newPostElem} type="text" value={props.newPostMessage} onChange={postOnChange} />
             <button className={styles.button} onClick={addMess} >Добавить сообщение</button>
         </div>
     )

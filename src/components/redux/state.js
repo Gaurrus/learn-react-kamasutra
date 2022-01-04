@@ -105,16 +105,24 @@ export const state = {
       id: 6,
     },
     ],
+    newPostMessage: 'super'
   }
 }
 
-export const addPost = (postMessage) => {
+export const addPost = () => {
   const newPost = {
-    post: postMessage,
+    post: state.profilePage.newPostMessage,
     likes: 0,
     avatar: avatarOne,
     id: state.profilePage.postsData.length + 1,
   };
   state.profilePage.postsData.push(newPost)
+  state.profilePage.newPostMessage = ''
   rerenderEntireTree(state, addPost)
+}
+
+export const updateNewPostMessage = (text) => {
+
+  state.profilePage.newPostMessage = text;
+  rerenderEntireTree(state, updateNewPostMessage)
 }

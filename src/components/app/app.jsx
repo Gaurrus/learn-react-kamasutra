@@ -24,7 +24,7 @@ export const App = (props) => {
 
         <Routes>
           <Route exact path="/dialogs" element={<Dialogs state={props.state} />} />
-          <Route exact path="/main" element={<Main state={props.state} addPost={props.addPost} />} />
+          <Route exact path="/main" element={<Main state={props.state} addPost={props.addPost} updateNewPostMessage={props.updateNewPostMessage}/>} />
           <Route exact path="/news" element={<News />} />
           <Route exact path="/music" element={<Music />} />
           <Route exact path="/settings" element={<Settings />} />
