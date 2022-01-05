@@ -21,10 +21,12 @@ export const App = (props) => {
       <div className="app-wrapper">
         <Header />
         <Nav />
-
         <Routes>
           <Route exact path="/dialogs" element={<Dialogs state={props.state} />} />
-          <Route exact path="" element={<Main state={props.state} addPost={props.addPost} updateNewPostMessage={props.updateNewPostMessage}/>} />
+          <Route exact path="" element={<Main state={props.state} 
+          dispatch={props.dispatch} 
+          addMessActionCreator={props.addMessActionCreator}
+          postOnChangeActionCreator={props.postOnChangeActionCreator}/>} />
           <Route exact path="/news" element={<News />} />
           <Route exact path="/music" element={<Music />} />
           <Route exact path="/settings" element={<Settings />} />

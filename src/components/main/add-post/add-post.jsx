@@ -7,12 +7,12 @@ export const AddPost = (props) => {
     const newPostElem = useRef();
 
     const addMess = () => {
-        props.addPost();
+        props.dispatch(props.addMessActionCreator());
     }
 
     const postOnChange = () => {
         const text = newPostElem.current.value;
-        props.updateNewPostMessage(text);
+        props.dispatch(props.postOnChangeActionCreator(text));
 
     }
 

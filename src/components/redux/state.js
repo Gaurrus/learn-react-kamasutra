@@ -1,5 +1,8 @@
 import { myAvatar, avatarOne, avatarTwo, avatarThree } from "../main/assets/index.js"
 
+const ADD_POST = "ADD-POST";
+const UPDATE_NEW_POST_MESSAGE = "UPDATE-NEW-POST-MESSAGE";
+
 export let store = {
   _state: {
     dialogsPage: {
@@ -112,23 +115,28 @@ export let store = {
     return this._state;
   },
   rerenderEntireTree() { console.log(this._state) },
-  addPost() {
-    const newPost = {
-      post: this._state.profilePage.newPostMessage,
-      likes: 0,
-      avatar: avatarOne,
-      id: this._state.profilePage.postsData.length + 1,
-    };
-    this._state.profilePage.postsData.push(newPost)
-    this._state.profilePage.newPostMessage = ''
-    this.rerenderEntireTree(this._state, this.addPost)
-  },
-  updateNewPostMessage(text) {
-    this._state.profilePage.newPostMessage = text;
-    this.rerenderEntireTree(this._state, this.updateNewPostMessage)
-  },
   subscribe(observer) {
     this.rerenderEntireTree = observer;
   },
 
+  dispatch(action) {
+    if (action.type === ADD_POST) {
+      const newPost = {
+        post: this._state.profilePage.newPostMessage,
+        likes: 0,
+        avatar: avatarOne,
+        id: this._state.profilePage.postsData.length + 1,
+      };
+      this._state.profilePage.postsData.push(newPost)
+      this._state.profilePage.newPostMessage = ''
+      this.rerenderEntireTree(this._state, this.addPost)
+    } else if (action.type === UPDATE_NEW_POST_MESSAGE) {
+      this._state.profilePage.newPostMessage = action.text;
+      this.rerenderEntireTree(this._state, this.updateNewPostMessage)
+    }
+  }
 }
+
+export const addMessActionCreator = () => ({ type: ADD_POST })
+
+export const postOnChangeActionCreator = (text) => ({ type: UPDATE_NEW_POST_MESSAGE, text: text })

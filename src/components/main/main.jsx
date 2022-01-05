@@ -13,7 +13,10 @@ export const Main = (props) => {
     <main className={mainStyles.main}>
       <MainWallpaper />
       <div className={mainStyles.miniprofile}>
-        <ProfileBlock state={props.state} addPost={props.addPost} updateNewPostMessage={props.updateNewPostMessage} />
+        <ProfileBlock state={props.state}
+          dispatch={props.dispatch}
+          addMessActionCreator={props.addMessActionCreator}
+          postOnChangeActionCreator={props.postOnChangeActionCreator} />
       </div>
       <div className={mainStyles.posts}>
         {posts}

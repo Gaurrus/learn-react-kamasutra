@@ -1,1 +1,1 @@
-export { store } from './state';
+export { store, addMessActionCreator, postOnChangeActionCreator } from './state';
