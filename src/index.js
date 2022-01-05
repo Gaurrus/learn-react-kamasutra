@@ -5,7 +5,7 @@ import { App } from './components/app/app';
 
 import reportWebVitals from './reportWebVitals';
 
-import { state, addPost, updateNewPostMessage, subscribe } from './components/redux';
+import { store } from './components/redux';
 
 
 import './index.css';
@@ -13,14 +13,14 @@ import './index.css';
 const rerenderEntireTree = (state) => {
   ReactDOM.render(
     <React.StrictMode>
-      <App state={state} addPost={addPost} updateNewPostMessage={updateNewPostMessage} />
+      <App state={store.getState()} addPost={store.addPost.bind(store)} updateNewPostMessage={store.updateNewPostMessage.bind(store)} />
     </React.StrictMode>,
     document.getElementById('root')
   );
 }
 
-rerenderEntireTree(state, addPost)
+rerenderEntireTree(store.getState(), store.addPost.bind(store))
 
 reportWebVitals();
 
-subscribe(rerenderEntireTree)
+store.subscribe(rerenderEntireTree)
