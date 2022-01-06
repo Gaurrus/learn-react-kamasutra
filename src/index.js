@@ -5,8 +5,7 @@ import { App } from './components/app/app';
 
 import reportWebVitals from './reportWebVitals';
 
-import { store, postOnChangeActionCreator, addMessActionCreator } from './components/redux';
-
+import { store, postOnChangeActionCreator, addMessActionCreator, messageOnChangeActionCreator, addMessAcCre } from './components/redux';
 
 import './index.css';
 
@@ -15,7 +14,10 @@ const rerenderEntireTree = (state) => {
     <React.StrictMode>
       <App state={store.getState()} dispatch={store.dispatch.bind(store)}
         postOnChangeActionCreator={postOnChangeActionCreator}
-        addMessActionCreator={addMessActionCreator} />
+        addMessActionCreator={addMessActionCreator}
+        addMessAcCre={addMessAcCre}
+        messageOnChangeActionCreator={messageOnChangeActionCreator}
+      />
     </React.StrictMode>,
     document.getElementById('root')
   );

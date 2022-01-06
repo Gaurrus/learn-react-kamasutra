@@ -22,11 +22,15 @@ export const App = (props) => {
         <Header />
         <Nav />
         <Routes>
-          <Route exact path="/dialogs" element={<Dialogs state={props.state} />} />
-          <Route exact path="" element={<Main state={props.state} 
-          dispatch={props.dispatch} 
-          addMessActionCreator={props.addMessActionCreator}
-          postOnChangeActionCreator={props.postOnChangeActionCreator}/>} />
+          <Route exact path="/dialogs" element={<Dialogs state={props.state}
+            dispatch={props.dispatch}
+            addMessAcCre={props.addMessAcCre}
+            messageOnChangeActionCreator={props.messageOnChangeActionCreator}
+          />} />
+          <Route exact path="" element={<Main state={props.state}
+            dispatch={props.dispatch}
+            addMessActionCreator={props.addMessActionCreator}
+            postOnChangeActionCreator={props.postOnChangeActionCreator} />} />
           <Route exact path="/news" element={<News />} />
           <Route exact path="/music" element={<Music />} />
           <Route exact path="/settings" element={<Settings />} />

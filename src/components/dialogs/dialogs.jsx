@@ -7,7 +7,11 @@ export const Dialogs = (props) =>
 (
   <div className={dialogsStyles.wrapper}>
     <ContactList state={props.state} />
-    <MessageArea state={props.state} />
+    <MessageArea state={props.state}
+      dispatch={props.dispatch}
+      addMessAcCre={props.addMessAcCre}
+      messageOnChangeActionCreator={props.messageOnChangeActionCreator}
+    />
   </div>
 );
 

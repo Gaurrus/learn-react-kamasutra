@@ -11,3 +11,10 @@
   font-weight: 700;
   margin-bottom: 20px;
 }
+
+.button {
+  padding: 5px 15px;
+  border-radius: 4px;
+  background-color: #1fd1c8;
+  font-size: 14px;
+}

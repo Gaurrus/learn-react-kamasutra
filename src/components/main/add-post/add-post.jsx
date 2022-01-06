@@ -13,12 +13,20 @@ export const AddPost = (props) => {
     const postOnChange = () => {
         const text = newPostElem.current.value;
         props.dispatch(props.postOnChangeActionCreator(text));
-
     }
 
     return (
         <div className={styles.addPostBlock}>
-            <input className={styles.input} ref={newPostElem} type="text" value={props.newPostMessage} onChange={postOnChange} />
+            <input className={styles.input}
+                ref={newPostElem} type="text"
+                value={props.newPostMessage}
+                onChange={postOnChange}
+                onKeyPress={(e) => {
+                    if (e.key === "Enter") {
+                        addMess()
+                    }
+
+                }} />
             <button className={styles.button} onClick={addMess} >Добавить сообщение</button>
         </div>
     )

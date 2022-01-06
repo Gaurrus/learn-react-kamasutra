@@ -3,6 +3,9 @@ import { myAvatar, avatarOne, avatarTwo, avatarThree } from "../main/assets/inde
 const ADD_POST = "ADD-POST";
 const UPDATE_NEW_POST_MESSAGE = "UPDATE-NEW-POST-MESSAGE";
 
+const ADD_MESSAGE = "ADD-MESSAGE";
+const UPDATE_NEW_MESSAGE = "UPDATE-NEW-MESSAGE";
+
 export let store = {
   _state: {
     dialogsPage: {
@@ -54,7 +57,8 @@ export let store = {
           mId: 5,
           message: 'Horosho!',
         },
-      ]
+      ],
+      newUpMessage: 'New message',
 
     },
 
@@ -129,14 +133,32 @@ export let store = {
       };
       this._state.profilePage.postsData.push(newPost)
       this._state.profilePage.newPostMessage = ''
-      this.rerenderEntireTree(this._state, this.addPost)
-    } else if (action.type === UPDATE_NEW_POST_MESSAGE) {
-      this._state.profilePage.newPostMessage = action.text;
-      this.rerenderEntireTree(this._state, this.updateNewPostMessage)
-    }
+      this.rerenderEntireTree(this._state)
+    } else
+
+      if (action.type === UPDATE_NEW_POST_MESSAGE) {
+        this._state.profilePage.newPostMessage = action.text;
+        this.rerenderEntireTree(this._state)
+      } else
+        if (action.type === ADD_MESSAGE) {
+          const newMessage = {
+            mId: this._state.dialogsPage.messagesData.length + 1,
+            message: this._state.dialogsPage.newUpMessage,
+          };
+          this._state.dialogsPage.messagesData.push(newMessage)
+          this._state.dialogsPage.newUpMessage = ''
+          this.rerenderEntireTree(this._state)
+        } else
+
+          if (action.type === UPDATE_NEW_MESSAGE) {
+            this._state.dialogsPage.newUpMessage = action.text;
+            this.rerenderEntireTree(this._state)
+          }
   }
 }
 
 export const addMessActionCreator = () => ({ type: ADD_POST })
+export const addMessAcCre = () => ({ type: ADD_MESSAGE })
 
 export const postOnChangeActionCreator = (text) => ({ type: UPDATE_NEW_POST_MESSAGE, text: text })
+export const messageOnChangeActionCreator = (text) => ({ type: UPDATE_NEW_MESSAGE, text: text })
