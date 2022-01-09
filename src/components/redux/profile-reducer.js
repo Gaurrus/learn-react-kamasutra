@@ -20,3 +20,11 @@ export const profileReducer = (state, action, avatar) => {
       return state;
   }
 };
+
+export const postOnChangeActionCreator = (text) => ({
+  type: UPDATE_NEW_POST_MESSAGE,
+  text: text,
+});
+
+export const addMessActionCreator = () => ({ type: ADD_POST });
+

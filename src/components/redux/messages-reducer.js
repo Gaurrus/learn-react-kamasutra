@@ -19,3 +19,9 @@ export const messagesReducer = (state, action) => {
       return state;
   }
 };
+
+export const addMessAcCre = () => ({ type: ADD_MESSAGE });
+export const messageOnChangeActionCreator = (text) => ({
+  type: UPDATE_NEW_MESSAGE,
+  text: text,
+});

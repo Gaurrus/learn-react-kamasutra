@@ -1,1 +1,6 @@
-export { store, addMessActionCreator, postOnChangeActionCreator, addMessAcCre, messageOnChangeActionCreator } from './state';
+export { store } from "./state";
+export {
+  addMessActionCreator,
+  postOnChangeActionCreator,
+} from "./profile-reducer";
+export { addMessAcCre, messageOnChangeActionCreator } from "./messages-reducer";

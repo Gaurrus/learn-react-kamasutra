@@ -7,11 +7,6 @@ import {
 import { messagesReducer } from "./messages-reducer.js";
 import { profileReducer } from "./profile-reducer.js";
 
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_MESSAGE = "UPDATE-NEW-POST-MESSAGE";
-const ADD_MESSAGE = "ADD-MESSAGE";
-const UPDATE_NEW_MESSAGE = "UPDATE-NEW-MESSAGE";
-
 export let store = {
   _state: {
     dialogsPage: {
@@ -141,15 +136,3 @@ export let store = {
     this.rerenderEntireTree(this._state);
   },
 };
-
-export const addMessActionCreator = () => ({ type: ADD_POST });
-export const addMessAcCre = () => ({ type: ADD_MESSAGE });
-
-export const postOnChangeActionCreator = (text) => ({
-  type: UPDATE_NEW_POST_MESSAGE,
-  text: text,
-});
-export const messageOnChangeActionCreator = (text) => ({
-  type: UPDATE_NEW_MESSAGE,
-  text: text,
-});
