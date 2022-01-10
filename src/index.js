@@ -6,6 +6,7 @@ import { App } from './components/app/app';
 import reportWebVitals from './reportWebVitals';
 
 import { store, postOnChangeActionCreator, addMessActionCreator, messageOnChangeActionCreator, addMessAcCre } from './components/redux';
+import { red_store } from './components/redux/redux-store'; 
 
 import './index.css';
 
@@ -23,8 +24,11 @@ const rerenderEntireTree = (state) => {
   );
 }
 
-rerenderEntireTree(store.getState(), store.dispatch.bind(store))
+// rerenderEntireTree(store.getState(), store.dispatch.bind(store))
 
 reportWebVitals();
 
-store.subscribe(rerenderEntireTree)
+red_store.subscribe(() => {
+  let state = store.getState()
+  rerenderEntireTree(state)
+})
