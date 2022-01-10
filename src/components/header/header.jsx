@@ -1,10 +1,10 @@
 import headerStyles from "../header/header.module.css";
-// import logo from "./assets/svg/logo.svg";
+import webLogo from "./assets/svg/logo.svg";
 
 export const Header = () => (
   <header className={headerStyles.header}>
     <img
-      // src={logo}
+      src={webLogo}
       alt="logo"
       className={headerStyles.logo}
     />
