@@ -4,40 +4,13 @@ import {
   avatarTwo,
   avatarThree,
 } from "../main/assets/index.js";
+
 import { messagesReducer } from "./messages-reducer.js";
 import { profileReducer } from "./profile-reducer.js";
 
 export let store = {
   _state: {
     dialogsPage: {
-      contactsData: [
-        {
-          id: "1",
-          name: "Garrus",
-          avatar: myAvatar,
-        },
-
-        {
-          id: "2",
-          name: "Зюзя",
-          avatar: avatarTwo,
-        },
-        {
-          id: "3",
-          name: "Пипа",
-          avatar: avatarThree,
-        },
-        {
-          id: "4",
-          name: "Кузя",
-          avatar: avatarOne,
-        },
-        {
-          id: "5",
-          name: "Федя",
-          avatar: avatarTwo,
-        },
-      ],
       messagesData: [
         {
           mId: 1,
@@ -64,16 +37,6 @@ export let store = {
     },
 
     profilePage: {
-      userData: {
-        firstName: "Иоанн",
-        lastName: "Рюриковичи мы!",
-        middleName: "Васильевич",
-        dateOfBirthd: "25 августа 1530г от рождества Христова",
-        age: "Возраст",
-        contry: "Царская Россия",
-        city: "Москва",
-        profession: "Цар",
-      },
 
       postsData: [
         {

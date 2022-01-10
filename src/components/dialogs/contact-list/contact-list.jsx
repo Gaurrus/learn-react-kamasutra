@@ -1,10 +1,45 @@
+import {
+  myAvatar,
+  avatarOne,
+  avatarTwo,
+  avatarThree,
+} from "../../main/assets";
 import { Contact } from './../contact';
 
 import contactListStyle from "./contact-list.module.css";
 
+const contactsData = [
+  {
+    id: "1",
+    name: "Garrus",
+    avatar: myAvatar,
+  },
+
+  {
+    id: "2",
+    name: "Зюзя",
+    avatar: avatarTwo,
+  },
+  {
+    id: "3",
+    name: "Пипа",
+    avatar: avatarThree,
+  },
+  {
+    id: "4",
+    name: "Кузя",
+    avatar: avatarOne,
+  },
+  {
+    id: "5",
+    name: "Федя",
+    avatar: avatarTwo,
+  },
+]
+
 export const ContactList = (props) => {
 
-  let contactsElements = props.state.dialogsPage.contactsData.map((contact) => <Contact key={contact.id} contact={contact.name} avatar={contact.avatar} />)
+  let contactsElements = contactsData.map((contact) => <Contact key={contact.id} contact={contact.name} avatar={contact.avatar} />)
 
 
   return (
