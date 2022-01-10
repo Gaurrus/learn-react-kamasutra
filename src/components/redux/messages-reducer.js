@@ -1,7 +1,35 @@
 const ADD_MESSAGE = "ADD-MESSAGE";
 const UPDATE_NEW_MESSAGE = "UPDATE-NEW-MESSAGE";
 
-export const messagesReducer = (state, action) => {
+const INITIAL_STATE = {
+  messagesData: [
+    {
+      mId: 1,
+      message: 'Hallo!',
+    },
+    {
+      mId: 2,
+      message: 'Salut!',
+    },
+    {
+      mId: 3,
+      message: 'Ti Gde?',
+    },
+    {
+      mId: 4,
+      message: 'Ya tut!!',
+    },
+    {
+      mId: 5,
+      message: 'Horosho!',
+    },
+  ],
+  newUpMessage: 'New message',
+}
+
+
+
+export const messagesReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case ADD_MESSAGE:
       const newMessage = {
