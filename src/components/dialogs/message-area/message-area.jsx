@@ -3,16 +3,16 @@ import { Message } from "./../message";
 import style from "./message-area.module.css";
 
 export const MessageArea = (props) => {
-  const addMessage = () => {
-    props.dispatch(props.addMessAcCre());
+  const onAddMessage = () => {
+    props.addMessage();
   };
 
   const messageOnChange = (e) => {
     const text = e.target.value;
-    props.dispatch(props.messageOnChangeActionCreator(text));
+    props.messageChange(text);
   };
 
-  let messagesList = props.state.dialogsPage.messagesData.map((message) => (
+  let messagesList = props.messagesData.map((message) => (
     <Message key={message.mId} message={message.message} />
   ));
 
@@ -25,14 +25,14 @@ export const MessageArea = (props) => {
         cols="30"
         rows="3"
         onChange={messageOnChange}
-        value={props.state.dialogsPage.newUpMessage}
+        value={props.newUpMessage}
         onKeyPress={(e) => {
           if (e.key === "Enter") {
-            addMessage();
+            onAddMessage();
           }
         }}
       />
-      <button className={style.button} onClick={addMessage}>
+      <button className={style.button} onClick={onAddMessage}>
         Отправить сообщение
       </button>
     </div>

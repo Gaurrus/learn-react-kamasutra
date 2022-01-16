@@ -22,8 +22,8 @@ export const App = (props) => {
         <Header />
         <Nav />
         <Routes>
-          <Route exact path="/dialogs" element={<Dialogs state={props.state}
-            dispatch={props.dispatch}
+          <Route exact path="/dialogs" element={<Dialogs
+            store={props.store}
             addMessAcCre={props.addMessAcCre}
             messageOnChangeActionCreator={props.messageOnChangeActionCreator}
           />} />

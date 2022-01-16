@@ -1,5 +1,5 @@
 import { ContactList } from './contact-list';
-import { MessageArea } from './message-area';
+import { MessageAreaContainer } from './message-area';
 
 import dialogsStyles from "./dialogs.module.css";
 
@@ -7,8 +7,8 @@ export const Dialogs = (props) =>
 (
   <div className={dialogsStyles.wrapper}>
     <ContactList state={props.state} />
-    <MessageArea state={props.state}
-      dispatch={props.dispatch}
+    <MessageAreaContainer
+      store={props.store}
       addMessAcCre={props.addMessAcCre}
       messageOnChangeActionCreator={props.messageOnChangeActionCreator}
     />
