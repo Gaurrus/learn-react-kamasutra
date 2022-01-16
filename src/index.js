@@ -17,6 +17,7 @@ const rerenderEntireTree = (state) => {
         addMessActionCreator={addMessActionCreator}
         addMessAcCre={addMessAcCre}
         messageOnChangeActionCreator={messageOnChangeActionCreator}
+        store={store}
       />
     </React.StrictMode>,
     document.getElementById('root')

@@ -1,1 +1,1 @@
-export { AddPost } from './add-post';
+export { AddPost, AddPostContainer } from './add-post';

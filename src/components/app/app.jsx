@@ -28,6 +28,7 @@ export const App = (props) => {
             messageOnChangeActionCreator={props.messageOnChangeActionCreator}
           />} />
           <Route exact path="" element={<Main state={props.state}
+            store={props.store}
             dispatch={props.dispatch}
             addMessActionCreator={props.addMessActionCreator}
             postOnChangeActionCreator={props.postOnChangeActionCreator} />} />

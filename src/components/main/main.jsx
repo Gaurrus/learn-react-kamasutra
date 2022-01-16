@@ -14,6 +14,7 @@ export const Main = (props) => {
       <MainWallpaper />
       <div className={mainStyles.miniprofile}>
         <ProfileBlock state={props.state}
+          store={props.store}
           dispatch={props.dispatch}
           addMessActionCreator={props.addMessActionCreator}
           postOnChangeActionCreator={props.postOnChangeActionCreator} />

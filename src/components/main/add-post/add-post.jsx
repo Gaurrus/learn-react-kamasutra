@@ -1,13 +1,13 @@
 import styles from "./add-post.module.css";
 
 export const AddPost = (props) => {
-  const addMess = () => {
-    props.dispatch(props.addMessActionCreator());
+  const onAddMess = () => {
+    props.addMess();
   };
 
-  const postOnChange = (e) => {
+  const onPostChange = (e) => {
     const text = e.target.value;
-    props.dispatch(props.postOnChangeActionCreator(text));
+    props.postChange(text);
   };
 
   return (
@@ -16,14 +16,14 @@ export const AddPost = (props) => {
         className={styles.input}
         type="text"
         value={props.newPostMessage}
-        onChange={postOnChange}
+        onChange={onPostChange}
         onKeyPress={(e) => {
           if (e.key === "Enter") {
-            addMess();
+            onAddMess();
           }
         }}
       />
-      <button className={styles.button} onClick={addMess}>
+      <button className={styles.button} onClick={onAddMess}>
         Добавить сообщение
       </button>
     </div>
